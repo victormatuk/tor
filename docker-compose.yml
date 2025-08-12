@@ -1,0 +1,9 @@
+version: "3.8"
+
+services:
+  tor-proxy:
+    image: dperson/torproxy
+    container_name: tor-proxy
+    ports:
+      - "9050:9050"  # Porta SOCKS5
+    restart: unless-stopped
