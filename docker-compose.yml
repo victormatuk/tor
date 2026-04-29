@@ -5,5 +5,10 @@ services:
     image: dperson/torproxy
     container_name: tor-proxy
     ports:
-      - "9050:9050"  # Porta SOCKS5
+      - "9050:9050" # Porta SOCKS5
     restart: unless-stopped
+    labels:
+      - dashboard.name=TOR
+      - dashboard.group=Antisec
+      - dashboard.hidden=false
+      - dashboard.scheme=socks5
